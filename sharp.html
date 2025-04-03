@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharpShot Edits | Professional Video Editing Services</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heavitas&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: rgba(15, 32, 39, 0.9);
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        /* .hero {
+            background-clip: ;
+            padding: 50px;
+            background: rgba(32, 58, 67, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        } */
+        .hero {
+            position: relative;
+            padding: 50px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the video fills the background */
+            z-index: -1; /* Make sure the video stays behind the text */
+            filter: brightness(50%);
+            
+        }
+        
+        .hero h1 {
+            font-family: 'Heavitas', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffffff;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .services, .about, .portfolio, .contact {
+            padding: 50px;
+            background: rgba(15, 32, 39, 0.85);
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .chat-box {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background: #2c5364;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+            color: #fff;
+        }
+        .chat-header {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #fff;
+        }
+        .chat-messages {
+            height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+            background: #203a43;
+            border-radius: 5px;
+        }
+        .chat-input {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .send-button {
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px;
+            background: #ffcc00;
+            color: #0f2027;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .portfolio {
+            padding: 50px;
+            background: rgba(15, 32, 39, 0.85);
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;  /* Space between videos */
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            max-width: 480px;  /* Limit max size to keep them manageable */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        /* Chat with us button */
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ffcc00;
+            color: #0f2027;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px; /* Rounded button */
+            border: 2px solid #ffcc00; /* Border matching the background */
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #0f2027; /* Dark background on hover */
+            color: #ffcc00; /* Text color changes on hover */
+            transform: scale(1.05); /* Slightly enlarge the button */
+            box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4); /* Bigger shadow on hover */
+        }
+
+        .cta-button:active {
+            transform: scale(0.98); /* Slight shrink effect on click */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo1.png" alt="SharpShot Edits Logo">
+        SharpShot Edits
+    </header>
+    <!-- <div class="hero">
+        <h1>Professional Video Editing for Businesses & Creators</h1>
+        <p>Transforming raw footage into stunning visuals.</p>
+        <a href="#" class="cta-button" onclick="openChat()">chat with us</a>
+    </div> -->
+    
+    <div class="hero">
+        <!-- Video Background -->
+        <video autoplay muted loop>
+            <source src="video 2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h1>Professional Video Editing for Businesses & Creators</h1>
+        <p>Transforming raw footage into stunning visuals.</p>
+        <a href="#" class="cta-button" onclick="openChat()">chat with us</a>
+    </div>
+    <div class="services">
+        <h2>Our Services</h2>
+        <p>✔️ Corporate Video Editing</p>
+        <p>✔️ Social Media Edits</p>
+        <p>✔️ Commercial & Ad Editing</p>
+        <p>✔️ YouTube & Content Creator Editing</p>
+    </div>
+    <div class="about">
+        <h2>About Us</h2>
+        <p>At SharpShot Edits, we take your vision and turn it into visually stunning videos that captivate and engage your audience.</p>
+    </div>
+    <div class="portfolio">
+        <h2>Our Work</h2>
+        <div class="video-container">
+            <video controls autoplay muted>
+                <source src="cool.mp4" type="video/mp4">
+            </video>
+            <video controls autoplay muted>
+                <source src="doritos.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: 03154522154</p>
+        <p>Email: <a href="mailto:sharpshootedits@gmail.com">sharpshootedits@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sharpshoot-edits">SharpShot Edits</a></p>
+    </div>
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">Chat with us</div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <input type="text" class="chat-input" id="chatMessage" placeholder="Type your message...">
+        <button class="send-button" onclick="sendMessage()">Send</button>
+    </div>
+    <script>
+        function openChat() {
+            document.getElementById('chatBox').style.display = 'block';
+        }
+
+        function sendMessage() {
+            let message = document.getElementById('chatMessage').value;
+            let chatMessages = document.getElementById('chatMessages');
+            if (message) {
+                let newMessage = document.createElement('div');
+                newMessage.textContent = "You: " + message;
+                newMessage.style.textAlign = "right";
+                newMessage.style.margin = "5px 0";
+                chatMessages.appendChild(newMessage);
+                document.getElementById('chatMessage').value = '';
+
+                // Auto-reply based on the message
+                setTimeout(() => {
+                    let autoReply = "Support: ";
+                    if (message.toLowerCase().includes("hi") || message.toLowerCase().includes("hello")) {
+                        autoReply += "Hi! How can I help you today?";
+                    } else if (message.toLowerCase().includes("thanks")) {
+                        autoReply += "You're welcome! Feel free to ask anything.";
+                    } else {
+                        autoReply += "We'll get back to you soon!";
+                    }
+
+                    let reply = document.createElement('div');
+                    reply.textContent = autoReply;
+                    reply.style.textAlign = "left";
+                    reply.style.margin = "5px 0";
+                    chatMessages.appendChild(reply);
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>
